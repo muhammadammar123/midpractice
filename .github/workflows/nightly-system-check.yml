@@ -1,0 +1,28 @@
+name: Nightly System Check
+
+# Schedule the workflow to run every day at midnight
+on:
+  schedule:
+    - cron: '0 0 * * *'   # Runs at 00:00 UTC every day
+  workflow_dispatch:       # Allows manual triggering
+
+jobs:
+  nightly-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log Nightly System Check
+        run: |
+          mkdir -p logs
+          echo "$(date): Nightly system check executed" >> logs/system_check.log
+
+      - name: Display log
+        run: cat logs/system_check.log
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: nightly-system-check-log
+          path: logs/system_check.log
