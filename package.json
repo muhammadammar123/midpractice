@@ -6,15 +6,22 @@
   "scripts": {
     "build": "echo Building Temperature Converter Project...",
     "test": "jest --runInBand --verbose",
-    "test:ci": "jest --runInBand --verbose --reporters=default --reporters=jest-junit"
+    "test:ci": "jest --runInBand --verbose --ci --reporters=default --reporters=jest-junit"
   },
-  "keywords": [ "temperature", "converter", "nodejs", "jest", "ci", "testing" ],
+  "keywords": [
+    "temperature",
+    "converter",
+    "nodejs",
+    "jest",
+    "ci",
+    "testing"
+  ],
   "author": "Muhammad Ammar",
   "license": "ISC",
   "devDependencies": {
     "jest": "^30.2.0",
-    "supertest": "^7.0.0",
-    "jest-junit": "^16.0.0"
+    "jest-junit": "^16.0.0",
+    "supertest": "^7.0.0"
   },
   "jest": {
     "testEnvironment": "node",
