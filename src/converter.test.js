@@ -13,5 +13,5 @@ test('Celsius to Kelvin', () => {
 });
 
 test('Kelvin to Celsius', () => {
-  expect(converter.kelvinToCelsius(273.15)).toBeCloseTo(10);
+  expect(converter.kelvinToCelsius(273.15)).toBeCloseTo(0);
 });
