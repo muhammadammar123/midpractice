@@ -22,7 +22,7 @@ jobs:
         run: cat logs/system_check.log
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: nightly-system-check-log
           path: logs/system_check.log
