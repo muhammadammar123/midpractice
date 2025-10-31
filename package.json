@@ -1,0 +1,28 @@
+{
+  "name": "temperature-converter",
+  "version": "1.0.0",
+  "description": "A Node.js temperature converter with automated testing and CI pipeline",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo Building Temperature Converter Project...",
+    "test": "jest --runInBand --verbose",
+    "test:ci": "jest --runInBand --verbose --reporters=default --reporters=jest-junit"
+  },
+  "keywords": [ "temperature", "converter", "nodejs", "jest", "ci", "testing" ],
+  "author": "Muhammad Ammar",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.0.0",
+    "jest-junit": "^16.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverage": true
+  },
+  "jest-junit": {
+    "output": "junit.xml",
+    "suiteName": "temperature-converter-tests"
+  }
+}
